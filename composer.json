@@ -1,35 +1,18 @@
 {
-	"name":        "uecode/daemon-bundle",
-	"type":        "library",
-	"description": "Symfony2 Daemon Bundle",
-	"keywords":    ["php", "daemon" ],
-	"homepage":    "https://github.com/uecode/daemon-bundle",
-	"license":     "MIT",
-	"authors":     [
-		{
-			"name":     "Aaron Scherer",
-			"email":    "aequasi@gmail.com",
-			"role":     "developer",
-			"homepage": "https://github.com/aequasi"
-		}
-	],
-	"support":     {
-		"email": "aaron@undergroundelephant.com"
-	},
-	"require":     {
-		"php":               ">=5.3.0",
-		"ext-json":          "*",
-       		"uecode/daemon": "dev-master",
-	},
-	"require-dev": {
-		"symfony/symfony": "dev-master"
-	},
-	"suggest":     {
-		"monolog/monolog": "Allows more advanced logging of the application flow"
-	},
-    "autoload":    {
+    "name": "medicorenl/daemon-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 daemon bundle.",
+    "keywords": ["php", "daemon"],
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/framework-bundle": ">=2.2.0,<3.0-dev",
+        "uecode/daemon": "dev-master"
+    },
+    "autoload": {
         "psr-0": {
-            "": "src"
+            "DaemonBundle\\": ""
         }
-    }
+    },
+    "target-dir": "DaemonBundle",
+    "minimum-stability": "dev"
 }

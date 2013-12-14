@@ -1,0 +1,13 @@
+daemon:
+    daemons:
+        queue:
+            appName: release:queue
+            appDir: %kernel.root_dir%
+            appDescription: Processes a queue of customer environments to release to.
+            logLocation: %kernel.logs_dir%/%kernel.environment%.queue.log
+            appPidLocation: %kernel.cache_dir%/queue/queue.pid
+            sysMaxExecutionTime: 0
+            sysMaxInputTime: 0
+            sysMemoryLimit: 1024M
+            appRunAsGID: 1
+            appRunAsUID: 1
